@@ -1,17 +1,10 @@
 class Point {
   
-  int x, y;
+  int x, y, z;
   
-  Point(int x, int y) {
+  Point(int x, int y, int z) {
     this.x = x;
     this.y = y;
-  }
-  
-  int getX() {
-    return this.x;
-  }
-
-  int getY() {
-    return this.y;
+    this.z = z;
   }
 }
