@@ -58,10 +58,10 @@ void solidOfRevolution() {
     
     for (int i = 0; i < numberOfPoints - 1; i++) {
       
-      currentPoint = points.get(i);
+      currentLevelPoint = points.get(i);
       nextLevelPoint = points.get(i + 1);
       
-      object.vertex(currentPoint.x, currentPoint.y, currentPoint.z);
+      object.vertex(currentLevelPoint.x, currentLevelPoint.y, currentLevelPoint.z);
       object.vertex(nextLevelPoint.x, nextLevelPoint.y, nextLevelPoint.z);
       
       for (int j = angle; j <= 360; j += angle) {
@@ -80,7 +80,7 @@ void solidOfRevolution() {
         radians = (angle + j) * 3.141592 / 180;
       }    
     }
-    object.endShape(CLOSE);   
+    object.endShape();   
     drawMode = false;
   }
 }
